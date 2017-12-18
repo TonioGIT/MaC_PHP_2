@@ -2,7 +2,7 @@
 <?php
 	$date = date('d/m/Y'); //Déclaration d la variable date qui récupère la date au format jour/moi/année.
 	$initialCoins = 0; 	   //Déclaration de la variable initialCoins et qui vaut 0.
-	$boissons = array("coffee", "tea", "cocoa", "latte"); //Déclaration de la variable boissons sous forme de tableau.
+	$boissons = array("Coffee", "Tea", "Cacao", "Latte", "Camomille"); //Déclaration de la variable boissons sous forme de tableau.
 	$liste =""; //Déclare variable liste.
 	foreach ($boissons as $boisson) {
 		$liste = $liste. "<li>$boisson</li>"; //Crée la liste des boissons.
