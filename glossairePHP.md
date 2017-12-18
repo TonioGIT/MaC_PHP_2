@@ -21,11 +21,33 @@ A la place de <?php echo "En attente" ?>
 on peut écrire <?= "En attente" ?>
 ```
 
+## STRING LENGHT 
+```
+
+```
+
+##  Lancer un script PHP en CLI:
+```
+-Se placer dans C\wamp64\bin\php\php...\ (là où il y a php.exe).
+-Cliquer dans la barre d'adresse et taper cmd (ouvre cmd en étant placé dans ce dossier).
+-Dans cmd taper: php C:\wamp64\www\MaC_PHP_2\index.php (php pour executer php.exe + espace + adresse complète de son fichier .php à executer).
+```
 ##  
 ```
 
 ```
+##  
+```
 
+```
+##  
+```
+
+```
+##  
+```
+
+```
 
 
 
