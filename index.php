@@ -3,7 +3,10 @@
 	$date = date('d/m/Y'); //Déclaration d la variable date qui récupère la date au format jour/moi/année.
 	$initialCoins = 0; 	   //Déclaration de la variable initialCoins et qui vaut 0.
 	$boissons = array("coffee", "tea", "cocoa", "latte"); //Déclaration de la variable boissons sous forme de tableau.
-
+	$liste =""; //Déclare variable liste.
+	foreach ($boissons as $boisson) {
+		$liste = $liste. "<li>$boisson</li>"; //Crée la liste des boissons.
+	}
 ?>
 
 
@@ -23,32 +26,26 @@
 </head>
 
 <body>
+
+	<div class="attente">
+		<h2><?= "En attente" ?></h2>  <!-- Affichage du message en attente avsyntaxe echo raccourcie. -->
+	</div>
 				
+					
+	<div class="date">
+		<h2><?php echo $date;  ?></h2> <!-- Affichage de la variable date. -->
+	</div>
+
+
 	<div class="counter" id="count">
 		<h2><?php echo $initialCoins. " €uros"?></h2>   <!-- Affichage de la variable initialCoins.  -->   
 	</div>
 
-	<div class="drinkEmpty">
-		<h2 id="label-*"><?= "En attente" ?></h2>  <!-- Affichage du message en attente avsyntaxe echo raccourcie. -->
-	</div>
-					
-	<div class="drinkEmpty">
-		<h2 id="label-*"><?php echo $date;  ?></h2> <!-- Affichage de la variable date. -->
+	<div>
+		<h3><?= $liste ?></h3>  <!-- Affichage de la var liste. -->
 	</div>
 
-	<div class="led-drink"></div>
-		<h2 id="label-coffee"><?php echo $boissons[0]; ?></h2> <!-- Affichage de la strtableau boissons à l'index 0. -->
-	</div>
-	<div class="drink">
-		<h2 id="label-tea"><?php echo $boissons[1]; ?></h2>  <!-- Affichage de la strtableau boissons à l'index 1. -->
-	</div>
-	<div class="choix-boisson-right">
-		<h2 id="label-cocoa"><?php echo $boissons[2]; ?></h2>  <!-- Affichage de la string du taboissons à l'index 2. -->
-	</div>
-	<div class="drink">
-		<h2 id="label-latte"><?php echo $boissons[3]; ?></h2>  <!-- Affichage de la string du taboissons à l'index 3. -->
-	</div>
-	
+
 							
 </body>
 </html>
