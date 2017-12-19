@@ -32,16 +32,16 @@ $longeur = strlen("Antoine");  ->7.
 -Cliquer dans la barre d'adresse et taper cmd (ouvre cmd en étant placé dans ce dossier).
 -Dans cmd taper: php C:\wamp64\www\MaC_PHP_2\index.php (php pour executer php.exe + espace + adresse complète de son fichier .php à executer).
 ```
-##  
+## SUBSTR
 ```
 substr("Antoine", 3, 2); -->oi.
 ```
-##  
+##  STRTOUPPER / STRTOLOWER
 ```
 strtoupper  -> majuscules.
 strtolower --> minuscules.
 ```
-##  
+##  STRPOS
 ```
 $pos = strpos("Antoine", "t");  -->2.
 ```
@@ -71,7 +71,11 @@ sort($Tableau);  -->tri le tableau.
 rsort($Tableau); -->tri le tableau à l'envers.
 print join(", ", $Tableau); --> 9, 8, 7, 6, 3, 1
 ```
-
+##  INCLUDE.
+```
+Pour lier une page .php à l'inde.php
+include "fonctions.php";
+```
 
 
 
@@ -81,5 +85,5 @@ print join(", ", $Tableau); --> 9, 8, 7, 6, 3, 1
 
 ```
 let num = 2;
-console.log(num)
+console.log(num);
 ```

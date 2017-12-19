@@ -1,36 +1,8 @@
 
 <?php
-	$date = date('d/m/Y'); //Déclaration d la variable date qui récupère la date au format jour/moi/année.
-	$initialCoins = 0; 	   //Déclaration de la variable initialCoins et qui vaut 0.
-	$boissons = array("Expresso", "Café long", "Thé"); //Déclaration de la variable boissons sous forme de tableau.
-	$liste =""; //Déclare variable liste.
-	foreach($boissons as $uneBoisson) {
-		$liste = $liste . "<li>$uneBoisson</li>"; //Crée la liste des boissons.
-	}
-
-	/*$expresso = array("eau", "café",);
-	$cafeLong = array("eau", "café",);
-	$the = array("eau", "thé",);*/
-
-	function prepareExpresso($sucre) {
-		$expresso = "Eau x 1, Café x 1, avec ". $sucre  . " sucre(s).";
-		return $expresso;
-	}
-
-	function prepareCafeLong($sucre) {
-		$CafeLong = "Eau x 2, Café x 2, avec ". $sucre  . " sucre(s).";
-		return $CafeLong;
-	}
-
-	function prepareThe($sucre) {
-		$the = "Eau x 1, thé x 1, avec ". $sucre  . " sucre(s).";
-		return $the;
-	}
-
+	include "fonctions.php";
 	
-
 ?>
-
 
 
 <!doctype html>
@@ -48,51 +20,80 @@
 </head>
 
 <body>
+	<div class="container">
 
-	<div class="attente">
-		<h2><?= "En attente" ?></h2>  <!-- Affichage du message en attente avsyntaxe echo raccourcie. -->
-	</div>
-
-	<div>
-		<h3>--------------------------------------------------------------</h3>
-	</div>
-				
+		<div class="attente">
+			<h3><?= "En attente..." ?></h3>  <!-- Affichage du message en attente avsyntaxe echo raccourcie. -->
+		</div>
+	
+		<div>
+			<h3>--------------------------------------------------------------</h3>
+		</div>
 					
-	<div class="date">
-		<h2><?php echo $date;  ?></h2> <!-- Affichage de la variable date. -->
-	</div>
-
-	<div>
-		<h3>--------------------------------------------------------------</h3>
-	</div>
-
-
-	<div class="counter" id="count">
-		<h2><?php echo $initialCoins. " €uros"?></h2>   <!-- Affichage de la variable initialCoins.  -->   
-	</div>
-
-	<div>
-		<h3>--------------------------------------------------------------</h3>
-	</div>
-
-	<div>
-		<h3><?= $liste; ?></h3>  <!-- Affichage de la var liste. -->
-	</div>
-
-	<div>
-		<h3>--------------------------------------------------------------</h3>
-	</div>
-
-	<div>
-		<h2><?= prepareExpresso(0); ?></h2>  <!-- Affichage de la var liste. -->
-	</div>
-	<div>
-		<h2><?= prepareCafeLong(3); ?></h2>  <!-- Affichage de la var liste. -->
-	</div>
-	<div>
-		<h2><?= prepareThe(1); ?></h2>  <!-- Affichage de la var liste. -->
-	</div>
-
+						
+		<div class="date">
+			<h3><?php echo $date;  ?></h3> <!-- Affichage de la variable date. -->
+		</div>
+	
+		<div>
+			<h3>--------------------------------------------------------------</h3>
+		</div>
+	
+	
+		<div class="counter" id="count">
+			<h3><?php echo $initialCoins. " €uros"?></h3>   <!-- Affichage de la variable initialCoins.  -->	   
+		</div>
+	
+		<div>
+			<h3>--------------------------------------------------------------</h3>
+		</div>
+	
+		<div>
+			<h3><?= $liste; ?></h3>  <!-- Affichage de la var liste. -->
+		</div>
+	
+		<div>
+			<h3>--------------------------------------------------------------</h3>
+		</div>
+	
+		<div>
+			<h2><?= prepareExpresso(0); ?></h2>  <!-- Affichage de la var liste. -->
+		</div>
+		<div>
+			<h2><?= prepareCafeLong(3); ?></h2>  <!-- Affichage de la var liste. -->
+		</div>
+		<div>
+			<h2><?= prepareThe(1); ?></h2>  <!-- Affichage de la var liste. -->
+		</div>
 							
+		<div>
+			<h3>--------------------------------------------------------------</h3>
+		</div>
+
+		<div>
+			<h2><?= preparerBoisson("Thé", 2); ?></h2>  <!-- Affichage de la var liste. -->
+		</div>
+		
+		<div>
+			<h3>--------------------------------------------------------------</h3>
+		</div>
+
+		<form action="preparerBoisson.php" method="POST">
+		  Choix boisson:<br>
+		  <input type="text" name="ChoixBoisson">
+		  <br>
+		  Nbre de sucres:<br>
+		  <input type="text" name="ChoixSucres">
+		  <br><br>
+		  <input type="submit" value="Submit">
+		</form>
+
+		<div>
+			<h3>--------------------------------------------------------------</h3>
+		</div>
+
+
+		
+	</div>
 </body>
 </html>
