@@ -1,10 +1,12 @@
 <?php
+
 include "fonctions.php";
 
-$getBoisson = htmlspecialchars($_POST["ChoixBoisson"]);
-$getSucres = htmlspecialchars($_POST["ChoixSucres"]);
+$getBoisson = ($_POST["boiss"]);
+$getSucres = ($_POST["suc"]);
 
-echo preparerBoisson($getBoisson, $getSucres);
+$PREPARATION = preparerBoisson($getBoisson, $getSucres);
+
 
 
 

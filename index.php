@@ -1,7 +1,43 @@
 
 <?php
-	include "fonctions.php";
-	
+
+include "fonctions.php";
+
+
+/*var_dump($_POST["boiss"]);
+var_dump($_POST["suc"]);
+
+function varTest() {
+	if (isset($_POST["boiss"], $_POST["suc"])) {
+		$getBoisson = ($_POST["boiss"]);
+		$getSucres = ($_POST["suc"]);
+		$PREPARATION = preparerBoisson($getBoisson, $getSucres);
+	}
+	else {
+		$PREPARATION = "En attente...";
+	}
+	return $PREPARATION;
+}
+
+
+varTest();
+
+print $PREPARATION;*/
+
+function varTest() {
+	if (isset($_POST["boiss"]) && $_POST["suc"]) {
+		$getBoisson = ($_POST["boiss"]);
+		$getSucres = ($_POST["suc"]);
+		$retourPrepa = preparerBoisson($getBoisson, $getSucres);
+	}
+	else {
+		$retourPrepa = "En attente...";
+	}
+	return $retourPrepa;
+}
+
+$PREPARATION = varTest();
+
 ?>
 
 
@@ -20,18 +56,10 @@
 </head>
 
 <body>
-	<div class="container">
-
-		<div class="attente">
-			<h3><?= "En attente..." ?></h3>  <!-- Affichage du message en attente avsyntaxe echo raccourcie. -->
-		</div>
-	
-		<div>
-			<h3>--------------------------------------------------------------</h3>
-		</div>
-					
+	<div class="container">					
 						
 		<div class="date">
+			<p>Date:</p>
 			<h3><?php echo $date;  ?></h3> <!-- Affichage de la variable date. -->
 		</div>
 	
@@ -41,6 +69,7 @@
 	
 	
 		<div class="counter" id="count">
+			<p>Crédit disponible:</p>
 			<h3><?php echo $initialCoins. " €uros"?></h3>   <!-- Affichage de la variable initialCoins.  -->	   
 		</div>
 	
@@ -49,6 +78,7 @@
 		</div>
 	
 		<div>
+			<p>Boissons disponibles:</p>
 			<h3><?= $liste; ?></h3>  <!-- Affichage de la var liste. -->
 		</div>
 	
@@ -57,6 +87,7 @@
 		</div>
 	
 		<div>
+			<p>Recettes:</p>
 			<h2><?= prepareExpresso(0); ?></h2>  <!-- Affichage de la var liste. -->
 		</div>
 		<div>
@@ -71,21 +102,29 @@
 		</div>
 
 		<div>
-			<h2><?= preparerBoisson("Thé", 2); ?></h2>  <!-- Affichage de la var liste. -->
+			<h3>Préparation en cours:</h3>
+			<p><?= $PREPARATION ?></p>
 		</div>
 		
 		<div>
 			<h3>--------------------------------------------------------------</h3>
 		</div>
 
-		<form action="preparerBoisson.php" method="POST">
+		<form action="index.php" method="POST">
 		  Choix boisson:<br>
-		  <input type="text" name="ChoixBoisson">
+		  <input type="radio" name="boiss" value="Expresso"> Expresso.<br>
+		  <input type="radio" name="boiss" value="Café long"> Café long.<br>
+		  <input type="radio" name="boiss" value="Thé"> Thé.<br>
 		  <br>
 		  Nbre de sucres:<br>
-		  <input type="text" name="ChoixSucres">
-		  <br><br>
+		  <input type="radio" name="suc" value="0" checked> Sans sucre.<br>
+		  <input type="radio" name="suc" value="1"> 1 sucre.<br>
+		  <input type="radio" name="suc" value="2"> 2 sucres.<br>
+		  <input type="radio" name="suc" value="3"> 3 sucres.<br>
+		  <input type="radio" name="suc" value="4"> 4 sucres.<br>
+		  <input type="radio" name="suc" value="5"> 5 sucres.<br>
 		  <input type="submit" value="Submit">
+
 		</form>
 
 		<div>

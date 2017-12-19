@@ -1,7 +1,5 @@
 <?php
 
-	
-
 	$date = date('d/m/Y'); //Déclaration d la variable date qui récupère la date au format jour/moi/année.
 	$initialCoins = 0; 	   //Déclaration de la variable initialCoins et qui vaut 0.
 	$tableauBoissons = array("Expresso", "Café long", "Thé"); //Déclaration de la variable boissons sous forme de tableau.
@@ -31,7 +29,7 @@
 		if ($boisson == "Expresso") {
 			$recette = prepareExpresso($sucre);
 		}
-		else if ($boisson == "Café Long") {
+		else if ($boisson == "Café long") {
 			$recette = prepareCafeLong($sucre);
 		}
 		else if ($boisson == "Thé") {
