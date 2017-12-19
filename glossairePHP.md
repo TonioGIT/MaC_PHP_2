@@ -34,7 +34,7 @@ $longeur = strlen("Antoine");  ->7.
 ```
 ##  
 ```
-substr("Antoine", 2, 3); -->toi.
+substr("Antoine", 3, 2); -->oi.
 ```
 ##  
 ```

@@ -1,0 +1,7 @@
+
+
+<?php
+
+	$factCafe . ' dose(s) de café + ' . $factEau . 'dose(s) d'eau + '' . $sucre . '' sucres.'
+
+?>

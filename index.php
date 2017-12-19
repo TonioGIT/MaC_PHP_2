@@ -2,18 +2,40 @@
 <?php
 	$date = date('d/m/Y'); //Déclaration d la variable date qui récupère la date au format jour/moi/année.
 	$initialCoins = 0; 	   //Déclaration de la variable initialCoins et qui vaut 0.
-	$boissons = array("Coffee", "Tea", "Cacao", "Latte", "Camomille"); //Déclaration de la variable boissons sous forme de tableau.
+	$boissons = array("Expresso", "Café long", "Thé"); //Déclaration de la variable boissons sous forme de tableau.
 	$liste =""; //Déclare variable liste.
 	foreach($boissons as $uneBoisson) {
 		$liste = $liste . "<li>$uneBoisson</li>"; //Crée la liste des boissons.
 	}
+
+	/*$expresso = array("eau", "café",);
+	$cafeLong = array("eau", "café",);
+	$the = array("eau", "thé",);*/
+
+	function prepareExpresso($sucre) {
+		$expresso = "Eau x 1, Café x 1, avec ". $sucre  . " sucre(s).";
+		return $expresso;
+	}
+
+	function prepareCafeLong($sucre) {
+		$CafeLong = "Eau x 2, Café x 2, avec ". $sucre  . " sucre(s).";
+		return $CafeLong;
+	}
+
+	function prepareThe($sucre) {
+		$the = "Eau x 1, thé x 1, avec ". $sucre  . " sucre(s).";
+		return $the;
+	}
+
+	
+
 ?>
 
 
 
 <!doctype html>
 <head lang="fr">
-	<title>Cooffee Machine Ilot 1</title>
+	<title>Cooffee Machine PHP</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- <link rel="stylesheet" type="text/css" href="styleFinal.css"> -->
@@ -30,10 +52,18 @@
 	<div class="attente">
 		<h2><?= "En attente" ?></h2>  <!-- Affichage du message en attente avsyntaxe echo raccourcie. -->
 	</div>
+
+	<div>
+		<h3>--------------------------------------------------------------</h3>
+	</div>
 				
 					
 	<div class="date">
 		<h2><?php echo $date;  ?></h2> <!-- Affichage de la variable date. -->
+	</div>
+
+	<div>
+		<h3>--------------------------------------------------------------</h3>
 	</div>
 
 
@@ -42,7 +72,25 @@
 	</div>
 
 	<div>
-		<h3><?= $liste ?></h3>  <!-- Affichage de la var liste. -->
+		<h3>--------------------------------------------------------------</h3>
+	</div>
+
+	<div>
+		<h3><?= $liste; ?></h3>  <!-- Affichage de la var liste. -->
+	</div>
+
+	<div>
+		<h3>--------------------------------------------------------------</h3>
+	</div>
+
+	<div>
+		<h2><?= prepareExpresso(0); ?></h2>  <!-- Affichage de la var liste. -->
+	</div>
+	<div>
+		<h2><?= prepareCafeLong(3); ?></h2>  <!-- Affichage de la var liste. -->
+	</div>
+	<div>
+		<h2><?= prepareThe(1); ?></h2>  <!-- Affichage de la var liste. -->
 	</div>
 
 							
