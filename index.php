@@ -4,8 +4,8 @@
 	$initialCoins = 0; 	   //Déclaration de la variable initialCoins et qui vaut 0.
 	$boissons = array("Coffee", "Tea", "Cacao", "Latte", "Camomille"); //Déclaration de la variable boissons sous forme de tableau.
 	$liste =""; //Déclare variable liste.
-	foreach ($boissons as $boisson) {
-		$liste = $liste. "<li>$boisson</li>"; //Crée la liste des boissons.
+	foreach($boissons as $uneBoisson) {
+		$liste = $liste . "<li>$uneBoisson</li>"; //Crée la liste des boissons.
 	}
 ?>
 
@@ -44,7 +44,6 @@
 	<div>
 		<h3><?= $liste ?></h3>  <!-- Affichage de la var liste. -->
 	</div>
-
 
 							
 </body>

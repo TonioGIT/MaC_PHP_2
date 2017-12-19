@@ -23,7 +23,7 @@ on peut écrire <?= "En attente" ?>
 
 ## STRING LENGHT 
 ```
-
+$longeur = strlen("Antoine");  ->7.
 ```
 
 ##  Lancer un script PHP en CLI:
@@ -34,21 +34,43 @@ on peut écrire <?= "En attente" ?>
 ```
 ##  
 ```
-
+substr("Antoine", 2, 3); -->toi.
 ```
 ##  
 ```
-
+strtoupper  -> majuscules.
+strtolower --> minuscules.
 ```
 ##  
 ```
-
+$pos = strpos("Antoine", "t");  -->2.
 ```
-##  
+##  Pi.
 ```
-
+En PHP Pi s'écrit M_PI.
 ```
+##  Arrondis.
+```
+$arrondi = round(8.654615);  -->9.
+$arrondiA3Dec = round(7.625148632, 3);  -->7.625.
+```
+##  Random.
+```
+rand();  -->nbre aléatoire entre 0 et 32767.
+rand(1, 10); -->nbre aléatoire entre 1 et 10.
+```
+##  Tableaux.
+```
+$monTableau = array();
+array_push($monTableau, "Rouge");
+array_push($monTableau, "Bleu");
+print count($monTableau);  -->2.
 
+$tableau = array(8, 6, 1, 7, 3, 9);
+sort($Tableau);  -->tri le tableau.
+rsort($Tableau); -->tri le tableau à l'envers.
+print join(", ", $Tableau); --> 9, 8, 7, 6, 3, 1
+```
 
 
 
