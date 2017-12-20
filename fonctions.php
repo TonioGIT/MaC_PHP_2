@@ -20,11 +20,11 @@
 
 	function prepareFinal($boisson, $nbreSucres) {
 		global $tabAssocBoissons;
-
+		$final = "";
 		foreach ($tabAssocBoissons as $nomBoisson => $recette) {
 			if ($nomBoisson == $boisson) {
 				foreach ($recette as $nomIngredient => $quantité) {
-					$final = $nomIngredient." x ".$quantité." avec ".$nbreSucres." sucre(s)";
+					$final .= $nomIngredient." x ".$quantité." avec ".$nbreSucres." sucre(s)";
 				}
 			return $final;
 			

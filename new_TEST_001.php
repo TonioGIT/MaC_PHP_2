@@ -12,23 +12,37 @@
 
 
 
-	$key = array_search("The", $tabAssocBoissons["The"]);
-	echo $key;
+	/*$key = array_search("The", $tabAssocBoissons);
+	echo $key;*/
 
 	//echo $tabAssocBoissons["The"]["cafe"]; 
 	/*echo $tabAssocBoissons["The"];*/
 
 
+function prepareBoisson($boisson, $nbreSucres) {
+	if (in_array($boisson, $tabAssocBoissons)) {
+		preparerBoisson($boisson, $sucre);
+
+	}
 
 
 
-	/*function preparer($tabIngredients) {
+
+
+}
+
+
+
+
+	function preparer($tabIngredients) {
 		$recette;
 		$recette = "Eau: " . $tabIngredients["eau"] . " , café: " . $tabIngredients["cafe"] . " , thé: " . $tabIngredients["the"] . ".";
 		return $recette;
 	};
 
 
-	echo preparer($tabAssocBoissons["The"]);*/
+	echo preparer($tabAssocBoissons["The"]);
+
+
 
 ?>
