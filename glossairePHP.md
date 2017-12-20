@@ -3,11 +3,50 @@
 
 
 ## Tableau de fonctions:
-FONCTION PHP | ROLE DE LA FONCTION
+Fonction/variable PHP | Rôle de la fonction
 ------------ | -------------------
 date() | Récupère la date du serveur sous différents formats: date('d,m,Y') par exemple.
 getdate() | Récupère un tableau avec plein de paramètres de l'heure (+ difficile à utiliser mais peut servir).
 time() | Récupère l'heure du serveur sous différents formats ? ('H:i:s' ?).
+trim() |
+ltrim() |
+rtrim() |
+strlen() |
+strtoupper() |
+ucfirst() |
+substr() |
+strpos() |
+explode() |
+     |
+htmlspecialchars() |
+urlencode() |
+isset() |
+empty() |
+$ GET |
+$ POST |
+$ REQUEST |
+$ SERVER |
+$ SESSION |
+$ COOKIE |
+
+     |
+include() |
+require() |
+include once() |
+require once() |
+
+key exists() |
+in array() |
+array search() |
+array keys() |
+array values() |
+is array() |
+count() |
+sort() |
+ksort() |
+asort() |
+each() |
+print r() |
 
 ## ECHO / PRINT
 ```

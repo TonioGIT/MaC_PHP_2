@@ -117,7 +117,7 @@ $PREPARATION = varTest();
 		  <input type="radio" name="boiss" value="Thé"> Thé.<br>
 		  <br>
 		  Nbre de sucres:<br>
-		  <input type="radio" name="suc" value="0" checked> Sans sucre.<br>
+		  <input type="radio" name="suc" value="0"> Sans sucre.<br>
 		  <input type="radio" name="suc" value="1"> 1 sucre.<br>
 		  <input type="radio" name="suc" value="2"> 2 sucres.<br>
 		  <input type="radio" name="suc" value="3"> 3 sucres.<br>
