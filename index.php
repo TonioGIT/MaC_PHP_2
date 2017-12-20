@@ -25,10 +25,10 @@ varTest();
 print $PREPARATION;*/
 
 function varTest() {
-	if (isset($_POST["boiss"]) && $_POST["suc"]) {
+	if (isset($_POST["boiss"]) && isset($_POST["suc"])) {
 		$getBoisson = ($_POST["boiss"]);
 		$getSucres = ($_POST["suc"]);
-		$retourPrepa = preparerBoisson($getBoisson, $getSucres);
+		$retourPrepa = prepareFinal($getBoisson, $getSucres);
 	}
 	else {
 		$retourPrepa = "En attente...";
@@ -86,20 +86,7 @@ $PREPARATION = varTest();
 			<h3>--------------------------------------------------------------</h3>
 		</div>
 	
-		<div>
-			<p>Recettes:</p>
-			<h2><?= prepareExpresso(0); ?></h2>  <!-- Affichage de la var liste. -->
-		</div>
-		<div>
-			<h2><?= prepareCafeLong(3); ?></h2>  <!-- Affichage de la var liste. -->
-		</div>
-		<div>
-			<h2><?= prepareThe(1); ?></h2>  <!-- Affichage de la var liste. -->
-		</div>
-							
-		<div>
-			<h3>--------------------------------------------------------------</h3>
-		</div>
+
 
 		<div>
 			<h3>Préparation en cours:</h3>
@@ -113,8 +100,8 @@ $PREPARATION = varTest();
 		<form action="index.php" method="POST">
 		  Choix boisson:<br>
 		  <input type="radio" name="boiss" value="Expresso"> Expresso.<br>
-		  <input type="radio" name="boiss" value="Café long"> Café long.<br>
-		  <input type="radio" name="boiss" value="Thé"> Thé.<br>
+		  <input type="radio" name="boiss" value="Cafelong"> Café long.<br>
+		  <input type="radio" name="boiss" value="The"> Thé.<br>
 		  <br>
 		  Nbre de sucres:<br>
 		  <input type="radio" name="suc" value="0"> Sans sucre.<br>
